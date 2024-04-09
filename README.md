@@ -37,14 +37,14 @@ This Flask app template offers a robust foundation for your project. With Tailwi
 7 directories, 13 files
 ```
 
-**app.py**: The main file that runs the Flask app.
-**config.py**: Contains the configuration settings for the app such as the database URI,different environments, and the secret key.
-**package.json** and **package-lock.json**: Contains the dependencies for the project.
-**requirements.txt**: Contains the Python dependencies for the project.
-**static**: Contains the CSS, images, and JavaScript files.
-**tailwind.config.js**: Contains the configuration settings for TailwindCSS.
-**templates**: Contains the HTML files.
-**views**: Contains the Python files that handle the routes.
+- **app.py**: The main file that runs the Flask app.
+- **config.py**: Contains the configuration settings for the app such as the database URI,different environments, and the secret key.
+- **package.json** and **package-lock.json**: Contains the dependencies for the project.
+- **requirements.txt**: Contains the Python dependencies for the project.
+- **static**: Contains the CSS, images, and JavaScript files.
+- **tailwind.config.js**: Contains the configuration settings for TailwindCSS.
+- **templates**: Contains the HTML files.
+- **views**: Contains the Python files that handle the routes.
 
 ## Installation
 
