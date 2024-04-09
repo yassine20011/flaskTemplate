@@ -12,6 +12,7 @@
       .directory {
         font-family: monospace;
         color: white;
+        font-size: 1rem;
       }
 
       .directory pre {
@@ -24,24 +25,22 @@
   <body
     class="bg-gradient-to-r from-blue-400 to-green-600 flex flex-col min-h-screen"
   >
-    <header class="text-center text-gray-300 mt-8 relative top-0">
+    <header class="text-center text-gray-300 mt-20">
       <h1 class="text-4xl font-bold">Flask app template</h1>
       <p class="text-lg">A Flask app template with TailwindCSS</p>
     </header>
 
     <div class="text-center mt-8">
       <a
-        href="{{ url_for('index') }}"
+        href="https://github.com/yassine20011/flaskTemplate?tab=readme-ov-file#flask-template"
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >Get started</a
-      >
+        >Get started</a>
     </div>
 
     <main class="flex-grow">
       <section class="flex justify-center mt-8 space-x-4">
-        <div
-          class="justify-center flex-col p-8 text-center w-96 bg-gray-800 rounded-lg shadow-lg flex"
-        >
+        
+        <div class="p-8 w-96 bg-gray-800 rounded-lg shadow-lg text-center">
           <div class="flex flex-row items-center">
             <img
               src="{{ url_for('static', filename='./images/flask.svg') }}"
@@ -75,13 +74,10 @@
         </div>
 
         <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-96">
+          
           <div class="bg-red-400 inline-block rounded-full h-3 w-3 mr-2"></div>
-          <div
-            class="bg-yellow-400 inline-block rounded-full h-3 w-3 mr-2"
-          ></div>
-          <div
-            class="bg-green-400 inline-block rounded-full h-3 w-3 mr-2"
-          ></div>
+          <div class="bg-yellow-400 inline-block rounded-full h-3 w-3 mr-2"></div>
+          <div class="bg-green-400 inline-block rounded-full h-3 w-3 mr-2"></div>
 
           <div class="directory">
             <pre><span class="text-green-500">➜ </span><span class="text-blue-400">flaskTemplate </span>tree</pre>
@@ -105,7 +101,29 @@
           </div>
 
         </div>
+
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-96">
+            <p class="text-lg text-gray-300">
+            <span class="text-red-500">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="w-6 h-6 inline"
+                fill="#fff"
+                >
+                <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+                />
+                </svg>
+            </span>
+            <p class="text-lg text-gray-300 mt-4">
+                Follow the steps on the README file to get started.
+                once you're done, and run the app, you should see this page. 
+                feel free to contribute to the project on GitHub.
+            </p>
+        </div>
       </section>
+
     </main>
 
     <footer
