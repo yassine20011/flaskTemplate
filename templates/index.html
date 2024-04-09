@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Flask app</title>
+    <style>
+      .directory {
+        font-family: monospace;
+        color: white;
+      }
+
+      .directory pre {
+        white-space: pre-wrap;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gradient-to-r from-blue-400 to-green-600 h-screen flex items-center justify-center"
+  >
+    <div class="grid grid-cols-2 gap-4">
+      <div
+        class="justify-center flex-col p-8 text-center w-96 bg-gray-800 rounded-lg shadow-lg flex"
+      >
+        <div class="flex flex-row items-center">
+          <img
+            src="{{ url_for('static', filename='./images/flask.svg') }}"
+            alt="Flask"
+            class="w-24 h-24 mt-4 mb-4 mx-auto"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            class="w-8 h-8 mx-auto"
+            fill="#fff"
+          >
+            <path
+              d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+            />
+          </svg>
+          <img
+            src="{{ url_for('static', filename='./images/tailwindcss.svg') }}"
+            alt="TailwindCSS"
+            class="w-24 h-24 mt-4 mb-4 mx-auto"
+          />
+        </div>
+
+        <p class="text-lg text-gray-300">
+          This is a simple Flask app template with TailwindCSS and a tree
+          structure of the project that can fit any Flask project.
+        </p>
+      </div>
+
+      <code class="bg-gray-800 p-8 rounded-lg shadow-lg w-96">
+        <div class="bg-red-400 inline-block rounded-full h-3 w-3 mr-2"></div>
+        <div class="bg-yellow-400 inline-block rounded-full h-3 w-3 mr-2"></div>
+        <div class="bg-green-400 inline-block rounded-full h-3 w-3 mr-2"></div>
+
+        <!-- make the head of shell script like this ➜  flaskTemplate -->
+        <div class="directory">
+          <pre> <span class="text-green-500">➜ </span><span class="text-blue-400">flaskTemplate </span>tree</pre>
+
+          <div class="directory">
+            <pre><span class="text-green-500">.</span>
+├── <span>app.py</span>
+├── <span>config.py</span>
+├── <span>static</span>
+│   ├── <span class="text-blue-500">css</span>
+│   │   └── <span>input.css</span>
+|   |   └── <span>output.css</span>
+│   ├── <span class="text-blue-500">images</span>
+│   ├── <span class="text-blue-500">js</span>
+├── <span class="text-blue-500">templates</span>
+│   └── <span>index.html</span>
+└── <span class="text-blue-500">views</span>
+    └── <span>root.py</span>
+    </pre>
+          </div>
+        </div>
+      </code>
+    </div>
+
+  
+  
+
+  </body> 
+</html>
