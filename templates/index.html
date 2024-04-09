@@ -22,70 +22,99 @@
   </head>
 
   <body
-    class="bg-gradient-to-r from-blue-400 to-green-600 h-screen flex items-center justify-center"
+    class="bg-gradient-to-r from-blue-400 to-green-600 flex flex-col min-h-screen"
   >
-    <div class="grid grid-cols-2 gap-4">
-      <div
-        class="justify-center flex-col p-8 text-center w-96 bg-gray-800 rounded-lg shadow-lg flex"
+    <header class="text-center text-gray-300 mt-8 relative top-0">
+      <h1 class="text-4xl font-bold">Flask app template</h1>
+      <p class="text-lg">A Flask app template with TailwindCSS</p>
+    </header>
+
+    <div class="text-center mt-8">
+      <a
+        href="{{ url_for('index') }}"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >Get started</a
       >
-        <div class="flex flex-row items-center">
-          <img
-            src="{{ url_for('static', filename='./images/flask.svg') }}"
-            alt="Flask"
-            class="w-24 h-24 mt-4 mb-4 mx-auto"
-          />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            class="w-8 h-8 mx-auto"
-            fill="#fff"
-          >
-            <path
-              d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
-            />
-          </svg>
-          <img
-            src="{{ url_for('static', filename='./images/tailwindcss.svg') }}"
-            alt="TailwindCSS"
-            class="w-24 h-24 mt-4 mb-4 mx-auto"
-          />
-        </div>
-
-        <p class="text-lg text-gray-300 text-left">
-            This Flask app template offers a robust foundation for your project. With TailwindCSS, you get flexible styling, and the project's tree structure is adaptable to any Flask project. Whether you're a beginner or a seasoned developer, this template simplifies your workflow, making it an ideal choice for any project.
-        </p>
-      </div>
-
-      <code class="bg-gray-800 p-8 rounded-lg shadow-lg w-96">
-        <div class="bg-red-400 inline-block rounded-full h-3 w-3 mr-2"></div>
-        <div class="bg-yellow-400 inline-block rounded-full h-3 w-3 mr-2"></div>
-        <div class="bg-green-400 inline-block rounded-full h-3 w-3 mr-2"></div>
-
-        <div class="directory">
-          <pre><span class="text-green-500">➜ </span><span class="text-blue-400">flaskTemplate </span>tree</pre>
-
-          <div class="directory">
-            <pre><span class="text-green-500">.</span>
-├── <span>app.py</span>
-├── <span>config.py</span>
-├── <span>static</span>
-│   ├── <span class="text-blue-500">css</span>
-│   │   └── <span>input.css</span>
-|   |   └── <span>output.css</span>
-│   ├── <span class="text-blue-500">images</span>
-│   ├── <span class="text-blue-500">js</span>
-├── <span class="text-blue-500">templates</span>
-│   └── <span>index.html</span>
-└── <span class="text-blue-500">views</span>
-    └── <span>root.py</span>
-    </pre>
-          </div>
-        </div>
-      </code>
     </div>
 
-  
-  
+    <main class="flex-grow">
+      <section class="flex justify-center mt-8 space-x-4">
+        <div
+          class="justify-center flex-col p-8 text-center w-96 bg-gray-800 rounded-lg shadow-lg flex"
+        >
+          <div class="flex flex-row items-center">
+            <img
+              src="{{ url_for('static', filename='./images/flask.svg') }}"
+              alt="Flask"
+              class="w-24 h-24 mt-4 mb-4 mx-auto"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              class="w-8 h-8 mx-auto"
+              fill="#fff"
+            >
+              <path
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+              />
+            </svg>
+            <img
+              src="{{ url_for('static', filename='./images/tailwindcss.svg') }}"
+              alt="TailwindCSS"
+              class="w-24 h-24 mt-4 mb-4 mx-auto"
+            />
+          </div>
 
-  </body> 
+          <p class="text-lg text-gray-300 text-left">
+            This Flask app template offers a robust foundation for your project.
+            With TailwindCSS, you get flexible styling, and the project's tree
+            structure is adaptable to any Flask project. Whether you're a
+            beginner or a seasoned developer, this template simplifies your
+            workflow, making it an ideal choice for any project.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-96">
+          <div class="bg-red-400 inline-block rounded-full h-3 w-3 mr-2"></div>
+          <div
+            class="bg-yellow-400 inline-block rounded-full h-3 w-3 mr-2"
+          ></div>
+          <div
+            class="bg-green-400 inline-block rounded-full h-3 w-3 mr-2"
+          ></div>
+
+          <div class="directory">
+            <pre><span class="text-green-500">➜ </span><span class="text-blue-400">flaskTemplate </span>tree</pre>
+
+            <div class="directory">
+              <span class="text-green-500">.</span> <br />
+              ├── <span>app.py</span> <br />
+              ├── <span>config.py</span> <br />
+              ├── <span>static</span> <br />
+              │ ├── <span class="text-blue-500">css</span> <br />
+              │ │ └── <span>input.css</span> <br />
+              | | └── <span>output.css</span> <br />
+              │ ├── <span class="text-blue-500">images</span> <br />
+              │ ├── <span class="text-blue-500">js</span> <br />
+              ├── <span class="text-blue-500">templates</span> <br />
+              │ └── <span>index.html</span> <br />
+              └── <span class="text-blue-500">views</span> <br />
+              └── <span>root.py</span> <br />
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="position-absolute bottom-0 w-full text-center text-gray-300 p-4"
+    >
+      <p>
+        Made with ❤️ by
+        <a href="https://yassine.is-a.dev" class="text-gray-800">Yassine</a>
+      </p>
+    </footer>
+  </body>
 </html>
