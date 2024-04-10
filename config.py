@@ -31,7 +31,5 @@ config = dict(
 )
 
 def get_config():
-    flask_env = os.environ.get('FLASK_ENV')
-    # default to development
-    print(" * FLASK_ENV: " + flask_env)
+    flask_env = os.environ.get('FLASK_ENV', 'development')
     return config.get(flask_env)
